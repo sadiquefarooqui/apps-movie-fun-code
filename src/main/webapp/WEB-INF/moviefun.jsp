@@ -95,15 +95,11 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach items="${movies}" var="movie">
+    <c:forEach items="${requestScope.movies}" var="movie">
       <tr>
-        <td><c:out value="${movie.title}"/></td>
-        <td><c:out value="${movie.director}"/></td>
-        <td><c:out value="${movie.genre}"/></td>
-        <td><c:out value="${movie.rating}"/></td>
-        <td><c:out value="${movie.year}"/></td>
-        <td><a href="?action=Remove&id=${movie.id}"><i
-            class="icon-trash"></i></a></td>
+        <td>${ movie.title }</td>
+        <td>${ movie.director }</td>
+        <td>${ movie.genre }</td>
       </tr>
     </c:forEach>
     </tbody>
